@@ -6,26 +6,26 @@ body {
   background-color: #444; 
   display: flex;
   justify-content: center;
-  align-items: center; /* Cambiado a center para centrar verticalmente también */
+  align-items: center;
   min-height: 100vh;
-  margin: 0; /* Asegura que no haya márgenes adicionales */
+  margin: 0; 
   background-color: transparent;
 }
 
 .scoreboard {
   display: flex;
   flex-direction: row;
-  margin: 20px auto; /* Centra horizontalmente y ajusta el margen superior */
-  width: 900px; /* Ancho fijo para el scoreboard */
-  height: 60px; /* Altura fija para el scoreboard, ajusta según necesidad */
-  border: 2px solid rgb(4, 17, 17); /* Añadido para bordes blancos */
+  margin: 20px auto; 
+  width: 900px; 
+  height: 60px; 
+  border: .1px solid rgb(4, 17, 17); 
 }
 
 .scoreboard > * {
   border-top: 1px solid white;
   border-bottom: 1px solid white; 
   border-right: 1px solid white; 
-  height: 100%; /* Usa la altura definida en .scoreboard */
+  height: 100%; 
   font-weight: bold; 
 }
 
@@ -37,7 +37,7 @@ body {
   display: flex;
   flex-direction: row;
   color: white; 
-  flex: 1; /* Permite que cada equipo ocupe un espacio igual */
+  flex: 1;
 }
 
 .team-detail {
@@ -56,20 +56,20 @@ body {
 
 .team-detail .team-nameandscore .team-name {
   padding: 4px;
-  font-size: 0.7em; /* Reduce el tamaño en un 5% desde 1.5em (1.5em * 0.95) */
+  font-size: 0.7em; 
 }
 
 .team-detail .team-nameandscore .team-score {
   padding: 2px;
-  margin-right: -55%; /* Ajusta el margen derecho para mover el elemento hacia la derecha */
+  margin-right: -55%; 
 }
 
 .team-detail .team-thisgame .team-times {
-  margin-left: 60%; /* Ajusta el margen derecho para mover el elemento hacia la derecha */
+  margin-left: 60%; 
 }
 
 .team-detail .team-thisgame .team-bonus {
-  margin-right: -60%; /* Ajusta el margen derecho para mover el elemento hacia la derecha */
+  margin-right: -60%; 
 }
 
 .team-detail .team-thisgame {
@@ -110,8 +110,8 @@ body {
   justify-content: center; 
   
   background-color: black; 
-  width: 60px; /* Ancho fijo para el scoreboard */
-  height: 60px; /* Altura fija para el scoreboard, ajusta según necesidad */
+  width: 60px;
+  height: 60px;
 }
 
 .logo img {

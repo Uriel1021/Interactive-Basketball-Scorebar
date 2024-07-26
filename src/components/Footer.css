@@ -1,0 +1,50 @@
+.bg-darkblue {
+    background-color: #add8e6; /* Azul celeste */
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .md\\:p-6 {
+    padding: 1.5rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-xs {
+    font-size: 0.75rem;
+  }
+  
+  .md\\:text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mt-2 {
+    margin-top: 0.5rem;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  .underline {
+    text-decoration: underline;
+  }
+  
+  .text-gray-300 {
+    color: #000000;
+  }
+  

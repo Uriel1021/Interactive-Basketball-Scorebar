@@ -1,0 +1,66 @@
+.bg-lightblue {
+    background-color: #add8e6; /* Azul celeste */
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .md\\:p-6 {
+    padding: 1.5rem;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  .items-center {
+    align-items: center;
+  }
+  
+  .space-x-2 > :not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  
+  .md\\:space-x-4 > :not(:last-child) {
+    margin-right: 1rem;
+  }
+  
+  .h-10 {
+    height: 2.5rem;
+  }
+  
+  .md\\:h-16 {
+    height: 4rem;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .md\\:text-4xl {
+    font-size: 2.25rem;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  .text-green-800 {
+    color: #22543d;
+  }
+  
