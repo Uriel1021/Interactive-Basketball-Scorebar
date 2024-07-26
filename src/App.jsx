@@ -1,10 +1,10 @@
 import React from 'react';
-import Scoreboard from './components/Scoreboard';
+import ScoreboardController from './components/ScoreboardController';
 
 const App = () => {
   return (
     <div>
-      <Scoreboard />
+      <ScoreboardController/>
     </div>
   );
 }
