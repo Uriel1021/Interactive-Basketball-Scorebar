@@ -1,0 +1,167 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* src/App.css */
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* src/App.css */
+
+.score-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #002f6c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.score-bar .tournament {
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex: 1;
+  text-align: center;
+}
+
+.score-bar .team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.score-bar .team-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.score-bar .team-score {
+  font-size: 2rem;
+}
+
+.score-bar .period-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.score-bar .period,
+.score-bar .time {
+  font-size: 1.2rem;
+}
+
+.score-bar .possession {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  flex: 1;
+  text-align: center;
+}
+
+.score-bar .description {
+  flex: 1;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.score-bar .fiba {
+  flex: 1;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.controls > div {
+  text-align: center;
+  margin: 10px;
+}
+
+.controls input {
+  margin: 10px 0;
+  padding: 5px;
+  width: 100%;
+}
+
+.controls .team-controls {
+  flex: 1;
+  min-width: 200px;
+}
+
+button {
+  background-color: #005eb8;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #004080;
+}
