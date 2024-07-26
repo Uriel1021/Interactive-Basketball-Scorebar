@@ -1,4 +1,4 @@
-# Scoreboard React + Vite
+# U-BasketBoard
 Este proyecto se desarrollo un Scorebar Interactivo en donde el usuario pueda realizar sus trasmisiones y dar seguimiento en tiempo real un partido a traves de scorebar que es importado con alguna herramienta de trasmision.
 Este seria el Scorebar
 ![image](https://github.com/user-attachments/assets/e6e8c339-7889-454f-a4b0-f9bf9b34bd87)
