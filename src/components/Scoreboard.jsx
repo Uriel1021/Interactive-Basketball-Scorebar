@@ -88,7 +88,7 @@ const ScoreboardController = () => {
   const [timeoutsB, setTimeoutsB] = useState(4);
   const [teamALogo, setTeamALogo] = useState('https://previews.123rf.com/images/boordon/boordon1802/boordon180200290/95191747-dos-manos-sostienen-la-pelota-de-baloncesto-con-el-n%C3%BAmero-1-arriba-de-la-canasta-logotipo-deportivo.jpg');
   const [teamBLogo, setTeamBLogo] = useState('https://previews.123rf.com/images/boordon/boordon1802/boordon180200318/95191887-dos-manos-sostienen-la-pelota-de-baloncesto-con-el-n%C3%BAmero-2-arriba-de-la-canasta-logotipo-deportivo.jpg');
-  const [barLogo, setBarLogo] = useState('public/344550679_485629013704610_657721024745829251_n.png');
+  const [barLogo, setBarLogo] = useState('344550679_485629013704610_657721024745829251_n.png');
   const [isRunning, setIsRunning] = useState(false);
   const [initialTime, setInitialTime] = useState('10:00');
   const [teamAColor, setTeamAColor] = useState('#FF0000');
@@ -146,7 +146,7 @@ const ScoreboardController = () => {
     setTeamBColor('#0000FF');
     setTeamALogo('https://previews.123rf.com/images/boordon/boordon1802/boordon180200290/95191747-dos-manos-sostienen-la-pelota-de-baloncesto-con-el-n%C3%BAmero-1-arriba-de-la-canasta-logotipo-deportivo.jpg');
     setTeamBLogo('https://previews.123rf.com/images/boordon/boordon1802/boordon180200318/95191887-dos-manos-sostienen-la-pelota-de-baloncesto-con-el-n%C3%BAmero-2-arriba-de-la-canasta-logotipo-deportivo.jpg');
-    setBarLogo('public/344550679_485629013704610_657721024745829251_n.png');
+    setBarLogo('344550679_485629013704610_657721024745829251_n.png');
     setTimeoutsA(4);
     setTimeoutsB(4);
   };
