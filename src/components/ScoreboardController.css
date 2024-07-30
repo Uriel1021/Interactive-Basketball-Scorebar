@@ -18,6 +18,7 @@
 .controls-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .team-controls, .general-controls {
@@ -28,6 +29,7 @@
 .team-controls {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .team-controls-section {
@@ -35,6 +37,7 @@
   padding: 10px;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .team-controls-section h3 {
@@ -42,31 +45,62 @@
 }
 
 .team-controls-section label {
+  padding: 1px;
   display: block;
   margin-bottom: 10px;
 }
 
-.team-controls-section input {
-  width: calc(100% - 20px);
-  padding: 5px;
+.team-controls-section input[type="color"] {
+  width: 50px; /* Ancho del selector de color */
+  height: 25px; /* Altura del selector de color */
+  padding: 0;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: none;
+  border-radius: 50%; /* Bordes redondeados */
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra alrededor del selector */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.team-controls-section input[type="color"]:hover {
+  transform: scale(1.1); /* Escala al pasar el ratón por encima */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el ratón por encima */
+}
+
+.team-controls-section input[type="color"]:focus {
+  outline: none; /* Elimina el contorno predeterminado */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Resplandor azul al enfocarse */
+}
+
+.team-controls-section .button-container {
+  padding: 4px;
+  padding-block-end: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  flex-wrap: wrap;
 }
 
 .team-controls-section button {
-  display: block;
-  width: 100%;
+  flex: 1 1 auto; /* Hace que los botones crezcan o se encojan según el tamaño disponible */
   padding: 10px;
-  margin-bottom: 10px;
   background-color: #007BFF;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .team-controls-section button:hover {
   background-color: #0056b3;
 }
 
+/* Ajustes específicos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .team-controls-section button {
+    flex: 1 1 100%; /* Hace que los botones tomen todo el ancho disponible en pantallas pequeñas */
+    margin-bottom: 10px; /* Añade un margen inferior entre los botones */
+  }
+}

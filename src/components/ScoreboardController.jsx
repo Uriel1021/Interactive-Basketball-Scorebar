@@ -5,7 +5,9 @@ import './ScoreboardController.css';
 
 const ScoreboardController = () => {
     const [teamAName, setTeamAName] = useState('TEAM A  10');
+    const [tempTeamAName, setTempTeamAName] = useState('');
     const [teamBName, setTeamBName] = useState('TEAM B  10');
+    const [tempTeamBName, setTempTeamBName] = useState('');
     const [scoreA, setScoreA] = useState(0);
     const [scoreB, setScoreB] = useState(0);
     const [timeLeft, setTimeLeft] = useState('10:00');
@@ -97,17 +99,26 @@ const ScoreboardController = () => {
       setTimeLeft(event.target.value);
     };
   
-    const updateTeamAName = (event) => {
+    const updateTempTeamAName = (event) => {
       const newName = event.target.value.toUpperCase();
       if (newName.length <= 9) {
-        setTeamAName(newName);
+        setTempTeamAName(newName);
       }
     };
-    const updateTeamBName = (event) => {
+
+    const applyTeamANameChange = () => {
+      setTeamAName(tempTeamAName);
+    };
+
+    const updateTempTeamBName = (event) => {
       const newName = event.target.value.toUpperCase();
       if (newName.length <= 9) {
-        setTeamBName(newName);
+        setTempTeamBName(newName);
       }
+    };
+
+    const applyTeamBNameChange = () => {
+      setTeamBName(tempTeamBName);
     };
   
     const handleLogoUpload = (event, setLogo) => {
@@ -149,10 +160,15 @@ const ScoreboardController = () => {
                 <h3>Configuracion del equipo A</h3>
                 <label>
                   Nombre del Equipo A:
-                  <input type="text" value={teamAName} onChange={updateTeamAName} />
+                  <input type="text" value={tempTeamAName} onChange={updateTempTeamAName} />
                 </label>
-                <label>Color del equipo A:</label>
-                <input type="color" value={teamAColor} onChange={(e) => setTeamAColor(e.target.value)} />
+                <div className='button-container'>
+                  <button onClick={applyTeamANameChange}>Cambiar Nombre</button>
+                </div>
+                <label>
+                  Color del equipo A:
+                  <input type="color" value={teamAColor} onChange={(e) => setTeamAColor(e.target.value)} />
+                </label>
                 <label>
                   <label>
                     Que desea mostrar en equipo A:
@@ -196,10 +212,15 @@ const ScoreboardController = () => {
                 <h3>Configuracion del equipo B</h3>
                 <label>
                   Nombre del Equipo B:
-                  <input type="text" value={teamBName} onChange={updateTeamBName} />
+                  <input type="text" value={tempTeamBName} onChange={updateTempTeamBName} />
                 </label>
-                <label>Color del equipo B:</label>
-                <input type="color" value={teamBColor} onChange={(e) => setTeamBColor(e.target.value)} />
+                <div className='button-container'>
+                <button onClick={applyTeamBNameChange}>Cambiar Nombre</button>
+                </div>
+                <label>
+                  Color del equipo B:
+                  <input type="color" value={teamBColor} onChange={(e) => setTeamBColor(e.target.value)} />
+                </label>
                 <label>
                 <label>
                     Que desea mostrar en equipo A:
@@ -242,7 +263,7 @@ const ScoreboardController = () => {
                 <h3>Control del Equipo A</h3>
                 <label>
                   Puntuación:
-                  <div>
+                  <div className='button-container'>
                     <button onClick={() => updateScoreA(1)}>+1</button>
                     <button onClick={() => updateScoreA(2)}>+2</button>
                     <button onClick={() => updateScoreA(3)}>+3</button>
@@ -251,7 +272,7 @@ const ScoreboardController = () => {
                 </label>
                 <label>
                   Tiempos fuera:
-                  <div>
+                  <div className='button-container'>
                     <button onClick={() => updateTimeoutsA(1)}>+1</button>
                     <button onClick={() => updateTimeoutsA(-1)}>-1</button>
                   </div>
@@ -267,7 +288,7 @@ const ScoreboardController = () => {
                 
                 <label>
                   Puntuación:
-                  <div>
+                  <div className='button-container'>
                     <button onClick={() => updateScoreB(1)}>+1</button>
                     <button onClick={() => updateScoreB(2)}>+2</button>
                     <button onClick={() => updateScoreB(3)}>+3</button>
@@ -276,7 +297,7 @@ const ScoreboardController = () => {
                 </label>
                 <label>
                   Tiempos fuera:
-                  <div>
+                  <div className='button-container'>
                     <button onClick={() => updateTimeoutsB(1)}>+1</button>
                     <button onClick={() => updateTimeoutsB(-1)}>-1</button>
                   </div>
@@ -301,10 +322,12 @@ const ScoreboardController = () => {
                     <option value="4th">4º</option>
                   </select>
                 </label>
-                <button onClick={handleStart}>Iniciar</button>
-                <button onClick={handleStop}>Detener</button>
-                <button onClick={handleReset}>Reiniciar</button>
-                <button onClick={resetShotClock}>Reiniciar Tiempo de Tiro</button>
+                <div className='button-container'>
+                  <button onClick={handleStart}>Iniciar</button>
+                  <button onClick={handleStop}>Detener</button>
+                  <button onClick={handleReset}>Reiniciar</button>
+                  <button onClick={resetShotClock}>Reiniciar Tiempo de Tiro</button>
+                </div>
                 <label>
                   Logo del Bar:
                   <input type="file" accept="image/*" onChange={(event) => handleLogoUpload(event, setBarLogo)} />
